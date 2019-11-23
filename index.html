@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel Admin</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <img src="logo.png" alt="logo">
+                <span>Painel Admin</span>
+            </div>
+            <div class="list-group list-group-flush border-right">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users"></i>
+                    Funcionários
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-box-open"></i>
+                    Produtos
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-sitemap"></i>
+                    Categorias
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-people-carry"></i>
+                    Fornecedores
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-chart-bar"></i>
+                    Relatórios
+                </a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+                <span id="menu-toggle" class="ml-auto">
+                    <img src="logo.png" alt="logo" class="mx-auto d-block">
+                </span>
+
+                <a class="navbar-brand" href="#" id="navbar-site-title">Painel</a>
+
+                <form class="form-inline" id="navbar-search-form">
+                    <input type="text" name="" class="form-control form-field" id="navbar-search-field" placeholder="Pesquisar">
+                </form>
+
+                <button class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target="#navbar-collapse"
+                    aria-controls="navbar-collapse"
+                    aria-expanded="false"
+                    aria-label="Exibe navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <div id="navbar-profile" class="ml-auto">
+                        <img src="https://randomuser.me/api/portraits/women/72.jpg">
+                        <span>Administrator</span>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content" class="container">
+
+                <canvas id="myChart" width="200" height="100"></canvas>
+
+                <div class="card-deck">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-success">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-danger">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <canvas id="myChart" width="200" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="my-3">Novo artigo</h3>
+
+                <div class="card card-shadow">
+                    <div class="card-body">
+                        <div class="form">
+                            <form>
+                                <div class="form-group">
+                                    <label>Autor</label>
+                                    <input type="text" class="form-field form-control" placeholder="Autor">
+                                    <hr>
+                                </div>
+                                <div class="form-group">
+                                    <label>Titulo</label>
+                                    <input type="text" class="form-field form-control" placeholder="Titulo">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-danger">Cancelar</button>
+                        <button type="button" class="btn btn-success">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        $('#menu-toggle').click((e) => {
+            $('#wrapper').toggleClass('toggled');
+            e.preventDefault();
+        });
+    });
+    </script>
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3, 48],
+                backgroundColor: [
+                    'red',
+                    'blue',
+                    'yellow',
+                    'green',
+                    'purple',
+                    'orange'
+                ]
+            },{
+                label: '# of teste',
+                data: [12, 19, 3, 5, 2, 3, 48],
+                backgroundColor: [
+                    'yellow',
+                    'blue',
+                    'yellow',
+                    'green',
+                    'purple',
+                    'orange'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+</body>
+</html>
