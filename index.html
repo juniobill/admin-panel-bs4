@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
 </head>
 <body>
-
     <div class="d-flex" id="wrapper">
-
         <div id="sidebar-wrapper">
             <div class="sidebar-heading">
                 <img src="logo.png" alt="logo">
@@ -49,17 +47,15 @@
 
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-                <span id="menu-toggle" class="ml-auto">
+                <span id="menu-toggle" class="mr-auto">
                     <img src="logo.png" alt="logo" class="mx-auto d-block">
                 </span>
 
                 <a class="navbar-brand" href="#" id="navbar-site-title">Painel</a>
 
-                <form class="form-inline" id="navbar-search-form">
-                    <input type="text" name="" class="form-control form-field" id="navbar-search-field" placeholder="Pesquisar">
-                </form>
-
-                <button class="navbar-toggler"
+                <button
+                    type="button"
+                    class="navbar-toggler"
                     data-toggle="collapse"
                     data-target="#navbar-collapse"
                     aria-controls="navbar-collapse"
@@ -69,6 +65,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <form class="form-inline" id="navbar-search-form">
+                        <input type="text" class="form-control form-field" id="navbar-search-field" placeholder="Pesquisar">
+                    </form>
+
                     <div id="navbar-profile" class="ml-auto">
                         <img src="https://randomuser.me/api/portraits/women/72.jpg">
                         <span>Administrator</span>
@@ -77,9 +77,6 @@
             </nav>
 
             <div id="content" class="container">
-
-                <canvas id="myChart" width="200" height="100"></canvas>
-
                 <div class="card-deck">
                     <div class="row">
                         <div class="col-sm-4">
@@ -100,16 +97,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <canvas id="myChart" width="200" height="100"></canvas>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
 
                 <h3 class="my-3">Novo artigo</h3>
 
@@ -134,16 +123,22 @@
                         <button type="button" class="btn btn-success">Confirmar</button>
                     </div>
                 </div>
+
+                <h3 class="my-3">Gráfico</h3>
+
+                <div class="card card-shadow">
+                    <div class="card-body">
+                        <canvas id="myChart" width="200" height="100"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
     <!-- js scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script>
     $(function() {
         $('#menu-toggle').click((e) => {
@@ -152,6 +147,8 @@
         });
     });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
